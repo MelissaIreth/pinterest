@@ -1,22 +1,21 @@
+# Proyecto final SPRINT 6
+## Pinterest
 
-  "name": "pinterest",
-  "version": "1.0.0",
-  "description": "Proyecto final",
-  "main": "gulpfile.js",
-  "scripts": 
-      "test": "echo \"Error: no test specified\" && exit 1"
-  ,
-  "author": "Melissa Pacheco",
-  "license": "ISC",
-  "devDependencies": 
-      "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-minify-css": "^1.2.4",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^3.0.0",
-    "gulp-webserver": "^0.9.1"
-  ,
-  "dependencies": 
-      "jquery": "^3.2.1"
-  
 
+### Requerimientos Técnicos
+El proyecto fue realizado con las siguientes dependencias NPM:
+
+- Dependencias de Desarrollo
+  * Gulp ~v.3.9.1
+  * Gulp-Concat ~v.2.6.1
+  * Gulp-Minify-CSS ~v.1.2.4
+  * Gulp-Sass ~v.3.0.0
+  * Gulp-Uglify ~v.2.0.0
+  * Gulp-Webserver ~v.0.9.1
+
+- Dependencias de Producción
+  * JQuery ~v.3.2.1
+
+### Levantamiento ambiente de desarrollo
+- Posicionado en nuestro poryecto hacer correr ``` npm install ```  para descargar e instalar todas las dependencias utilizadas.
+- Correr gulp para que se realizen las tareas especificadas.
