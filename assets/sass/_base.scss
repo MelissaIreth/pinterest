@@ -33,6 +33,23 @@ nav{
 		@include fa();
 	}
 }
+
+#hashtags{
+	display: flex;
+	width: 90%;
+	.all-hash{
+		display: inline-block;
+		padding: 8px;
+		background-color: tomato;
+		color: white;
+		margin: 10px 2px;
+		border-radius: 10px;
+		a{
+			color: white;
+			text-decoration: none;
+		}
+	}
+}
 .all-imgs{
 	display: flex;
 	margin: 0;
@@ -41,14 +58,18 @@ nav{
 		display: inline-block;
 		width: 234px;
 		background-color: $gris-claro;
-		color: gray;
+		color: #505050;
 		margin: 10px;
 		border-radius: 20px;
 		.circle{
 			background-color: pink;
 			color: whitesmoke;
 			border-radius: 100%;
-			padding: 3px 1px 3px 5px;
+			padding: 3px 2px 3px 5px;
+		}
+		span{
+			font-size: 10px;
+			color: $silver;
 		}
 	}
 	img{
