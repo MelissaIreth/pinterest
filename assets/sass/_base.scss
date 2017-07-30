@@ -1,14 +1,18 @@
+*{
+	font-family: $montserrat;
+}
 nav{
 	.fa{
 		color: $rojo;
 		font-size: 2em;
-		margin: 10px 20px;
+		margin: 10px 15px;
 	}
 	input{
-		width:70%;
+		width:65%;
 		padding: 10px;
 		background-color: $gris;
 		border: 0;
+		font-family: 'Helvetica', FontAwesome, sans-serif;
 	}
 	select{
 		background-color: $gris;
@@ -19,11 +23,11 @@ nav{
 	img{
 		width: 2%;
 		border-radius: 100%;
-		margin: 0 15px -5px;
+		margin: 0 10px -5px;
 	}
 	span{
 		margin: 5px;
-		color: $gris;
+		color: $gris-nav;
 		font-size: 20px;
 	}
 	.fa-bars{
@@ -34,10 +38,11 @@ nav{
 	}
 }
 
-#hashtags{
+.hashtags{
 	display: flex;
-	width: 90%;
-	.all-hash{
+	width: 100%;
+    overflow-x: scroll;
+	&__info{
 		display: inline-block;
 		padding: 8px;
 		background-color: tomato;
@@ -50,7 +55,7 @@ nav{
 		}
 	}
 }
-.all-imgs{
+.all-caja{
 	display: flex;
 	margin: 0;
 	padding: 0;
@@ -77,4 +82,78 @@ nav{
 		padding: 10px;
 		border-radius: 20px;
 	}
+}
+
+/*MODAL*/
+
+.modal{
+  z-index: 1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 40%;
+  height:90vh;
+  background: #FFF;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  box-shadow: 0px 1px 18px -1px rgba(140,140,140,0.42);
+  &__nav{
+    color: #404040;
+    font-size: 15px;
+    font-weight: 600;
+    &--iconos-list{
+      list-style: none;
+      li{
+        display:inline-block;
+        padding: 0 6%;
+        &:last-child{
+          margin-left:13%;
+          padding
+          a{
+            text-decoration:none;
+            background-color:$rojo;
+            color:white;
+          }
+        }
+      }
+    }
+  }   
+  &__cont {
+    margin-top:-5%;
+    line-height: 26px;
+    font-size: 14px;
+
+    h3{
+      margin-left: 5%;
+    }
+  }  
+  &__cont--img{
+    height:50vh;
+    padding: 0 17.5%;
+  }
+  &__cont--footer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    border-top: 1px solid rgba(#000, 0.1) 
+  }
+  &__close {
+    margin-left: 90%;
+  }
+  &--iconos-list{
+    margin-top: -4%;
+    margin-left: -15%;
+    list-style: none;
+    li{
+      display:inline-block;
+      padding: 0 2%;
+      &:last-child{
+        visibility: hidden;
+        a{
+          text-decoration:none;
+        }
+      }
+    }
+  }
 }
