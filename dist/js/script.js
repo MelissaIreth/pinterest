@@ -10294,7 +10294,7 @@ function el_modal(){
 	yeison.forEach(function(cv){
 		$('#' + cv.id).click(function(e) {
 					
-			var m_icons = (	'<ul class="modal__nav--iconos-list">' + 
+			var m_icons = (	'<ul class="el_modal__nav--iconos-list">' + 
 								'<li><a href="#"><i class="fa fa-download" aria-hidden="true"></i></a></li>' +
 								'<li><a href="#"><i class="fa fa-check" aria-hidden="true"></i></a></li>' +
 								'<li><a href="#"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a></li>' + 
@@ -10302,19 +10302,20 @@ function el_modal(){
 				            '</ul>');
 
 			var modal = ('<div class="modal" data-modal="modal-1">' +
-							'<div class="modal__nav">' + 
-								'<div class="modal__nav--iconos">' +  
-									'<a class="modal__close" data-modal-action="close" href="#close"><i class="fa fa-times" aria-hidden="true"></i></a>' +
+							'<a class="modal__close" data-modal-action="close" href="#close"><i class="fa fa-times" aria-hidden="true"></i></a>' +
+							'<div class="el_modal">' +
+							'<div class="el_modal__nav">' + 
+								'<div class="el_modal__nav--iconos">' + 
 									m_icons +
 								'</div>' +
 							'</div>' +
-							'<div class="modal__cont">' +
+							'<div class="el_modal__cont">' +
 								'<h3>' + cv.title + '</h3>' + 
-								'<img src="assets/img/' +cv.image_url +'" class="modal__cont--img">' + 
-								'<div class="modal__cont--iconos">' +
+								'<img src="assets/img/' +cv.image_url +'" class="el_modal__cont--img">' + 
+								'<div class="el_modal__cont--iconos">' +
 									m_icons + 
 								'</div>' +
-								'<div class="modal__cont--footer">' +
+								'<div class="el_modal__cont--footer">' +
 									'<span class="circle">M</span>' +
 									'<span class="user">' + cv.user + '</span>' +
 									'<span class="hash">#' + cv.hashtag +'</span>' +  
@@ -10322,7 +10323,7 @@ function el_modal(){
 									'<p>' + cv.description + '</p>' +
 								'</div>'+
 							'</div>'+
-						'</div>');
+						'</div></div>');
 
 			$('.modal').show();
  			$('body').append(modal);

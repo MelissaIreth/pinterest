@@ -84,9 +84,25 @@ nav{
 }
 
 /*MODAL*/
-
 .modal{
-	padding-top: 15px;
+	background-color: rgba(97,97,97,0.11);
+	z-index: 1;
+  	position: fixed;
+  	top: 50%;
+  	left: 50%;
+  	width: 100%;
+  	height: 100vh;
+  	transform: translate(-50%, -50%);
+  	&__close {
+    margin-left: 92%;
+    color: white;
+    .fa-times{
+    	margin-top: 30px;
+    	font-size: 2em;
+    }
+  }
+}
+.el_modal{
   	z-index: 1;
   	position: fixed;
   	top: 50%;
@@ -96,21 +112,19 @@ nav{
   	background: #FFF;
   	transform: translate(-50%, -50%);
   	border-radius: 5px;
-  	box-shadow: 0px 1px 18px -1px rgba(140,140,140,0.42);
   	&__nav{
 	    color: #404040;
 	    font-size: 15px;
 	    font-weight: 600;
     	&--iconos-list{
       		list-style: none;
-      		margin-top: -15px;
       		padding-bottom: 5px;
       		padding-left: 5px;
 	      li{
 	        display:inline-block;
 	        padding: 0 6%;
 	        &:last-child{
-	          margin-left:13%;
+	          margin-left:19%;
         	}
         	a{
         		color: $silver;
@@ -123,7 +137,7 @@ nav{
   }   
   &__cont {
     margin-top:-5%;
-    line-height: 26px;
+    line-height: 20px;
     font-size: 14px;
 
     h3{
@@ -140,7 +154,6 @@ nav{
   &__cont--img{
     height:50vh;
     padding: 0 17.5%;
-    margin-bottom: 20px;
   }
   &__cont--footer{
     align-items: center;
@@ -169,9 +182,5 @@ nav{
     	font-weight: bold;
 
     } 
-  }
-  &__close {
-    margin-left: 92%;
-    color: black;
   }
 }
