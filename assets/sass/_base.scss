@@ -8,17 +8,18 @@ nav{
 		margin: 10px 15px;
 	}
 	input{
-		width:65%;
+		width:60%;
 		padding: 10px;
 		background-color: $gris;
 		border: 0;
-		font-family: 'Helvetica', FontAwesome, sans-serif;
+		font-family: $fontawesome;
+		color: #505050;
 	}
 	select{
 		background-color: $gris;
     	border: 0;
-    	padding: 9px;
-    	margin: -4px;
+    	padding: 8px;
+    	margin: -3px;
 	}
 	img{
 		width: 2%;
@@ -45,7 +46,7 @@ nav{
 	&__info{
 		display: inline-block;
 		padding: 8px;
-		background-color: tomato;
+		background-color: #e5bfb8;
 		color: white;
 		margin: 10px 2px;
 		border-radius: 10px;
@@ -67,10 +68,8 @@ nav{
 		margin: 10px;
 		border-radius: 20px;
 		.circle{
-			background-color: pink;
-			color: whitesmoke;
-			border-radius: 100%;
-			padding: 3px 2px 3px 5px;
+			@include circle();
+			font-size: 1em;
 		}
 		span{
 			font-size: 10px;
@@ -87,35 +86,39 @@ nav{
 /*MODAL*/
 
 .modal{
-  z-index: 1;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 40%;
-  height:90vh;
-  background: #FFF;
-  transform: translate(-50%, -50%);
-  border-radius: 5px;
-  box-shadow: 0px 1px 18px -1px rgba(140,140,140,0.42);
-  &__nav{
-    color: #404040;
-    font-size: 15px;
-    font-weight: 600;
-    &--iconos-list{
-      list-style: none;
-      li{
-        display:inline-block;
-        padding: 0 6%;
-        &:last-child{
-          margin-left:13%;
-          padding
-          a{
-            text-decoration:none;
-            background-color:$rojo;
-            color:white;
-          }
-        }
-      }
+	padding-top: 15px;
+  	z-index: 1;
+  	position: fixed;
+  	top: 50%;
+  	left: 50%;
+  	width: 30%;
+  	height:90vh;
+  	background: #FFF;
+  	transform: translate(-50%, -50%);
+  	border-radius: 5px;
+  	box-shadow: 0px 1px 18px -1px rgba(140,140,140,0.42);
+  	&__nav{
+	    color: #404040;
+	    font-size: 15px;
+	    font-weight: 600;
+    	&--iconos-list{
+      		list-style: none;
+      		margin-top: -15px;
+      		padding-bottom: 5px;
+      		padding-left: 5px;
+	      li{
+	        display:inline-block;
+	        padding: 0 6%;
+	        &:last-child{
+	          margin-left:13%;
+        	}
+        	a{
+        		color: $silver;
+        	}
+      	}
+    }
+    .save{
+    	@include save();
     }
   }   
   &__cont {
@@ -124,36 +127,51 @@ nav{
     font-size: 14px;
 
     h3{
-      margin-left: 5%;
+      margin-left: 6%;
+      padding-top: 5px;
+    }
+    .save{
+    	@include save();
+    }
+    a{
+    	color: $silver;
     }
   }  
   &__cont--img{
     height:50vh;
     padding: 0 17.5%;
+    margin-bottom: 20px;
   }
   &__cont--footer{
-    display: flex;
     align-items: center;
     justify-content: flex-end;
     padding: 10px 20px;
-    border-top: 1px solid rgba(#000, 0.1) 
+    border-top: 1px solid rgba(#000, 0.1);
+    .circle{
+		@include circle();
+    	margin-right: 5px;
+    	font-size: 20px;
+    }
+    .user{
+    	font-weight: bold;
+    	margin-right: 5px;
+    }
+    .hash{
+    	font-weight: bold;
+    	margin-right: 5px;
+    }
+    a{
+    	padding: 5px;
+    	background-color: $gris;
+    	color: #333;
+    	margin-left: 80px;
+    	text-decoration: none;
+    	font-weight: bold;
+
+    } 
   }
   &__close {
-    margin-left: 90%;
-  }
-  &--iconos-list{
-    margin-top: -4%;
-    margin-left: -15%;
-    list-style: none;
-    li{
-      display:inline-block;
-      padding: 0 2%;
-      &:last-child{
-        visibility: hidden;
-        a{
-          text-decoration:none;
-        }
-      }
-    }
+    margin-left: 92%;
+    color: black;
   }
 }

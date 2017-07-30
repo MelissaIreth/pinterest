@@ -10260,7 +10260,7 @@ $(document).ready(function() {
 		var img = '<img src="assets/img/'+ yeison[i].image_url +'">';
 		var title = '<h4>'+yeison[i].title+'<span> <i class="fa fa-thumb-tack" aria-hidden="true"></i> 36,6k <i class="fa fa-check" aria-hidden="true"> 6</i></span></h4>';
 		var description = '<p>'+yeison[i].description+'</p>';
-		var user_hash = '<h4><span class="circle">M </span>'+yeison[i].user+' #'+yeison[i].hashtag+'</h4></li>';
+		var user_hash = '<h4><span class="circle">M</span>'+yeison[i].user+' #'+yeison[i].hashtag+'</h4></li>';
 		
 		$('.hashtags').append('<div class="hashtags__info"><a href="#">'+yeison[i].hashtag+'</a></div>');
 
@@ -10298,13 +10298,14 @@ function el_modal(){
 								'<li><a href="#"><i class="fa fa-download" aria-hidden="true"></i></a></li>' +
 								'<li><a href="#"><i class="fa fa-check" aria-hidden="true"></i></a></li>' +
 								'<li><a href="#"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a></li>' + 
-								'<li><a href="#"><i class="fa fa-thumb-tack" aria-hidden="true"></i> Guardar</a></li>' + 
+								'<li><a href="#" class="save"><i class="fa fa-thumb-tack" aria-hidden="true"></i> Guardar</a></li>' + 
 				            '</ul>');
 
 			var modal = ('<div class="modal" data-modal="modal-1">' +
 							'<div class="modal__nav">' + 
-								'<div class="modal__nav--iconos">' + m_icons + 
+								'<div class="modal__nav--iconos">' +  
 									'<a class="modal__close" data-modal-action="close" href="#close"><i class="fa fa-times" aria-hidden="true"></i></a>' +
+									m_icons +
 								'</div>' +
 							'</div>' +
 							'<div class="modal__cont">' +
@@ -10314,7 +10315,9 @@ function el_modal(){
 									m_icons + 
 								'</div>' +
 								'<div class="modal__cont--footer">' +
-									'<p><span>' + cv.user.charAt(0).toUpperCase() + '</span>' + cv.user + '</p>' + 
+									'<span class="circle">M</span>' +
+									'<span class="user">' + cv.user + '</span>' +
+									'<span class="hash">#' + cv.hashtag +'</span>' +  
 									'<a href="#">Leerlo</a>' + 
 									'<p>' + cv.description + '</p>' +
 								'</div>'+
