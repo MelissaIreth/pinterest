@@ -12,8 +12,8 @@ nav{
 		padding: 10px;
 		background-color: $gris;
 		border: 0;
-		font-family: $fontawesome;
 		color: #505050;
+		font-weight: 600;
 	}
 	select{
 		background-color: $gris;
@@ -152,7 +152,7 @@ nav{
     }
   }  
   &__cont--img{
-    height:50vh;
+    height: 50vh;
     padding: 0 17.5%;
   }
   &__cont--footer{
